@@ -509,13 +509,11 @@ header nav a {
 
 .rondez-hero-section-left {
     flex: 4;
-    border: 1px solid;
 }
 
 .rondez-left-img-container {
     width: 400px;
     height: 600px;
-    border: 1px solid;
     display: flex;
     align-items: end;
     position: relative;
@@ -536,7 +534,57 @@ header nav a {
 
 .rondez-hero-section-right {
     flex: 6;
-    border: 1px solid;
+}
+
+.rondez-hero-section-right h2 {
+    height: 150px;
+    display: flex;
+    align-items: center;
+    font-size: 30px;
+    margin-top: 15px;
+}
+
+.labels {
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-bottom: 50px;
+}
+
+.input-choix {
+    display: flex;
+    flex-direction: column;
+    height: 100px;
+    justify-content: space-evenly;
+    font-size: larger;
+    font-weight: bold;
+}
+
+.input-choix input {
+    height: 50px;
+    border-radius: 10px;
+    background-color: rgb(141, 234, 185 , 0.25);
+    border: none;
+}
+
+.input-choix2 {
+    display: flex;
+    gap: 20px;
+}
+
+.input-choix2 input {
+    flex: 7;
+    border: none;
+}
+
+.input-choix2 button {
+    flex: 3;
+    border-radius: 20px;
+    background-color: #38A169;
+    color: white;
+    border: none;
+    cursor: pointer;
 }
 
 .rondez-hero-section-left h1 {
