@@ -41,6 +41,14 @@ header nav a {
     flex-wrap: nowrap;
     align-items: center;
 }
+.logo-button {
+    cursor: pointer;
+}
+
+.logo-button:hover {
+    transition: 1s;
+    transform: scale(1.1);
+}
 
 .burger {
     display: none;
@@ -297,7 +305,7 @@ header nav a {
     border-radius: 30px;
     height: 38px;
     border: none;
-    width: 70%;
+    width: 100%;
     outline: none;
     padding-left: 20px;
     font-weight: bold;
