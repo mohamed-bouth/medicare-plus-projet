@@ -1,8 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Zalando+Sans+SemiExpanded:ital,wght@0,200..900;1,200..900&display=swap');
+
 * {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Inter', 'Zalando Sans SemiExpanded', sans-serif;
+    
 }
 
 header {
@@ -18,7 +21,7 @@ header {
 }
 
 .nav {
-    width: 55%;
+    width: 500px;
     display: flex;
     justify-content: space-between;
     margin: 15px;
@@ -27,7 +30,7 @@ header {
 header nav a {
     text-decoration: none;
     color: white;
-    font-size: 20px;
+    font-size: 15px;
     font-weight: bold;
 }
 
@@ -250,6 +253,45 @@ header nav a {
     border-radius: 30px;
 }
 
+.option-search {
+    border: 6px solid #8DEAB9;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    border-radius: 15px;
+    display: none;
+}
+
+.option-search.show {
+    display: block;
+}
+
+
+
+.option-search-nam {
+    border: 1px solid #8DEAB9;
+    padding: 6px 0;
+    font-size: small;
+    padding-left: 15px;
+    font-weight: bold;
+    color: gray;
+    cursor: pointer;
+    text-decoration: none;
+    display: none;
+}
+
+.option-search-nam.show {
+  display: block;
+}
+
+.option-search-nam:hover {
+    color: black;
+    transition: 0.5s;
+}
+
+
+
 .accueil-cherche-bar input {
     background-color: white;
     border-radius: 30px;
@@ -394,6 +436,10 @@ header nav a {
     flex-direction: column;
 }
 
+.medecine-card.hidden {
+    display: none;
+}
+
 .medecine-card-img-container {
     flex: 6;
     display: flex;
@@ -429,6 +475,7 @@ header nav a {
 .medecine-competence {
     display: flex;
     gap: 25px;
+    justify-content: space-between;
 }
 
 .medecine-competence h3 {
@@ -497,7 +544,7 @@ header nav a {
 }
 
 .rondez-hero-section {
-    width: 95%;
+    width: 80%;
     box-shadow: 4px 4px 32px;
     border-radius: 40px;
     display: flex;
@@ -512,8 +559,8 @@ header nav a {
 }
 
 .rondez-left-img-container {
-    width: 400px;
-    height: 600px;
+    width: 350px;
+    height: 520px;
     display: flex;
     align-items: end;
     position: relative;
@@ -521,7 +568,7 @@ header nav a {
 
 .rondez-left-img-container div {
     width: 100%;
-    height: 500px;
+    height: 400px;
     background-color: #8DEAB9;
     border-top-left-radius: 40px;
     border-top-right-radius: 40px;
@@ -545,7 +592,7 @@ header nav a {
 }
 
 .labels {
-    height: 600px;
+    height: 500px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -566,7 +613,19 @@ header nav a {
     border-radius: 10px;
     background-color: rgb(141, 234, 185 , 0.25);
     border: none;
+    padding-left: 10px;
+    color: gray;
 }
+
+.input-choix select {
+    height: 50px;
+    border-radius: 10px;
+    background-color: rgb(141, 234, 185 , 0.25);
+    border: none;
+    padding-left: 10px;
+    color: gray;
+}
+
 
 .input-choix2 {
     display: flex;
@@ -592,7 +651,7 @@ header nav a {
     width: 100%;
     display: flex;
     align-items: center;
-    font-size: 40px;
+    font-size: 35px;
 }
 
 .rondez-ball1 {
