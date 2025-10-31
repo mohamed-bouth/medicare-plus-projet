@@ -83,7 +83,7 @@ header nav a {
         width: 100%;
         text-align: center;
         transition: 0.3s;
-        background-color: #38A169;
+        background-color: rgba(47, 47, 47, 0.9);
         margin: 0px;
         z-index: 10;
     }
@@ -275,8 +275,6 @@ header nav a {
     display: block;
 }
 
-
-
 .option-search-nam {
     border: 1px solid #8DEAB9;
     padding: 6px 0;
@@ -297,8 +295,6 @@ header nav a {
     color: black;
     transition: 0.5s;
 }
-
-
 
 .accueil-cherche-bar input {
     background-color: white;
@@ -355,6 +351,40 @@ header nav a {
     font-size: 20px;
     padding: 10px;
 
+}
+
+
+/* ========= accueil madia ========== */
+
+@media (max-width: 1050px){
+    .accueil-left-box {
+        display: none;
+    }
+    .carousel {
+        width: 100%;
+    }
+    .hero-information {
+        width: 100%;
+    }
+    .hero-information-inner-box h1 {
+        font-size: 40px;
+    }
+    .hero-information-inner-box p {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 380px){
+    .hero-information-inner-box h1 {
+        font-size: 30px;
+    }
+    .event-bar {
+        font-size: medium;
+        height: 30px;
+    }
+    .mask {
+        height: 600px;
+    }
 }
 
 /* ========== medecine section ========= */
@@ -525,6 +555,7 @@ header nav a {
     align-items: center;
 }
 
+
 .diponible-button img {
     width: 50%;
     height: 50%;
@@ -540,6 +571,30 @@ header nav a {
     background-color: #8DEAB9;
     text-decoration: none;
     color: white;
+}
+
+/* ========== medecine madia ========== */
+
+@media (max-width: 1050px) {
+    .medecine-up-section-right {
+        display: none;
+    }
+    .medecine-up-section-left {
+        width: 100%;
+    }
+    .cherche-container {
+        flex-direction: column;
+        height: 65px;
+    }
+}
+
+@media (max-width: 580px){
+    .medecine-up-section-left h1 {
+        font-size: x-large;
+    }
+    .medecine-up-section-left p {
+        font-size: medium;
+    }
 }
 
 /* ========== rondez section ========== */
@@ -687,10 +742,119 @@ span {
     z-index: 1;
 }
 
+
+.rondez-add {
+    width: 80%;
+    box-shadow: 4px 4px 32px;
+    border-radius: 40px;
+    padding: 20px;
+}
+
+.rondez-add h1 {
+    text-align: center;
+}
+
+.rondezs {
+    border-top: 1px solid;
+    margin: 10px 0;
+}
+
+.rondez-add p {
+    font-size: x-large;
+}
+
+.appointment-item {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid;
+    height: auto;
+    padding: 10px 0;
+    flex-wrap: wrap;
+}
+
+.delete-btn {
+  background-color: rgba(255, 60, 60, 0.8);
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+  height: 60px;
+}
+
+/* ========== rondez madia ========= */
+
+@media (max-width: 1360px) {
+    .rondez-hero-section-right h2 {
+        font-size: 25px;
+    }
+}
+@media (max-width: 1224px) {
+    .rondez-hero-section-right h2 {
+        font-size: 20px;
+    }
+}
+@media (max-width: 1050px) {
+    .rondez-hero-section-right h2 {
+        font-size: 20px;
+    }
+    .rondez-hero-section-left {
+        display: none;
+    }
+    
+}
+@media (max-width: 560px) {
+    .input-choix input {
+        height: 40px;
+    }
+    .input-choix select {
+        height: 40px;
+    }
+    .input-choix {
+        height: 80px;
+    }
+    .labels {
+        height: 400px;
+    }
+    .rondez-ball2 {
+        width: 100px;
+        height: 100px;
+        left: 30px;
+        top: 30px;
+    }
+    .rondez-ball1 {
+        width: 100px;
+        height: 100px;
+        
+    }
+    .input-choix{
+        font-size: medium;
+    }
+    .input-choix2 button {
+        font-size: x-small;
+    }
+    .rondez-add p {
+    font-size: medium;
+    margin: 10px 0;
+}
+}
+
 footer {
     width: 100%;
     height: 80px;
     background-color: #38A169;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+@media (max-width: 400px){
+    footer {
+        height: 50px;
+        font-size: xx-small;
+    }
 }
 
 

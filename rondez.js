@@ -48,5 +48,96 @@ function applyLightMode() {
     })
 
 }
+const savedAppointments = JSON.parse(localStorage.getItem("appointments")) || [];
+const appointments = savedAppointments;
+renderAppointments();
+
+
+const form = document.getElementById("appointmentForm");
+
+form.addEventListener("submit" , function (e) {
+    e.preventDefault();
+
+    const formData = new FormData(form);
+    const name = formData.get("name").trim();
+    const email = formData.get("email").trim();
+    const doctor = formData.get("doctor");
+    const date = formData.get("date");
+
+    const nameinput = document.getElementById("name-input")
+    const emailinput = document.getElementById("email-input")
+    const doctorinput = document.getElementById("doctor-input")
+    const dateinput = document.getElementById("date-input")
+
+    if(name === "") {
+        nameinput.style.border ="1px solid rgba(255, 26, 26, 0.5)"
+        return
+    }else {
+        nameinput.style.border ="none"
+    }
+
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailPattern.test(email)) {
+        emailinput.style.border ="1px solid rgba(255, 26, 26, 0.5)"
+    return;
+    }else {
+        emailinput.style.border ="none"
+    }
+
+    if (doctor === "none") {
+        doctorinput.style.border ="1px solid rgba(255, 26, 26, 0.5)"
+    return;
+    }else {
+        doctorinput.style.border ="none"
+    }
+
+    const today = new Date().toISOString().split("T")[0];
+    if (date < today) {
+        dateinput.style.border ="1px solid rgba(255, 26, 26, 0.5)"
+    return;
+    }else {
+        dateinput.style.border ="none"
+    }
+    const appointment = { name, email, doctor, date };
+    appointments.push(appointment);
+    renderAppointments();
+    localStorage.setItem("appointments", JSON.stringify(appointments));
+    form.reset();
+    
+})
+
+
+function renderAppointments() {
+  const list = document.getElementById("appointmentsList");
+  list.innerHTML = "";
+  appointments.forEach((appointment, index) => {
+    const div = document.createElement("div");
+    div.classList.add("appointment-item");
+    div.innerHTML = `
+      <p><strong>Nom: <br></strong> ${appointment.name}</p>
+      <p><strong>Email: <br></strong> ${appointment.email}</p>
+      <p><strong>Médecin: <br></strong> ${appointment.doctor}</p>
+      <p><strong>Date: <br></strong> ${appointment.date}</p>
+      <button class="delete-btn" data-index="${index}">Supprimer</button>
+    `;
+    list.appendChild(div);
+  });
+  const deleteButtons = document.querySelectorAll(".delete-btn");
+  deleteButtons.forEach(btn => {
+    btn.addEventListener("click", function() {
+      const index = this.getAttribute("data-index");
+      appointments.splice(index, 1);
+      renderAppointments();
+      localStorage.setItem("appointments", JSON.stringify(appointments));
+    });
+  });
+}
+
+
+
+
+
+
+
 
         

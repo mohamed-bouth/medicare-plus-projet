@@ -38,7 +38,6 @@ const train = document.querySelectorAll(".opi-card")
 const box = document.getElementById("box")
 const inputbar = document.getElementById("bonga")
 const search = document.querySelectorAll(".option-search")
-
 let darkmode = localStorage.getItem("theme") === "dark";
 
 if(darkmode) {
@@ -75,6 +74,7 @@ function applyDarkMode() {
         serchs.style.backgroundColor = "#1E1E1E";
     });
     if(logoButton) logoButton.src = "img/mdi_star-crescent.png"
+    
 }
 
 function applyLightMode() {
